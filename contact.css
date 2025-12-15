@@ -1,5 +1,12 @@
 /* CONTACT PAGE  */
 
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
 .contactCard {
   max-width: 720px;
   margin: 3rem auto;
