@@ -10,18 +10,19 @@
 
     <script src="hamburgerMenu.js" defer></script>
   </head>
+
   <body>
-    <!-- Header -->
-    <header>
-      <div class="wrapperTitle_subTitle">
-        <h1>Shervin Babaei Portfolio</h1>
+    <!--HEADER-->
+    <header class="siteHeader">
+      <div class="headerText">
+        <h1>Shervin Babaei</h1>
         <p>Full-Stack Web Development Student</p>
       </div>
 
       <button
         class="hamburger"
         id="hamburger"
-        aria-label="Open navigation menu"
+        aria-label="Toggle navigation"
         aria-expanded="false"
       >
         ☰
@@ -30,60 +31,58 @@
       <nav class="navMenu" id="navMenu">
         <a href="index.html">Home</a>
         <a href="project.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </header>
 
-    <!-- Main -->
+    <!-- MAIN  -->
     <main class="container">
-      <!-- Centered Contact Wrapper -->
-      <div class="contactWrapper">
-        <!-- Page Intro -->
-        <section class="contactHeader">
+      <section class="contactCard">
+        <header class="contactHeader">
           <h2>Contact</h2>
           <p>
-            If you’d like to discuss projects, opportunities, or collaboration,
-            feel free to reach out.
+            Interested in working together or have a question? Send me a message
+            below.
           </p>
-        </section>
+        </header>
 
         <!-- Contact Info -->
         <section class="contactInfo">
-          <h3>Get in Touch</h3>
-
-          <ul class="contactList">
+          <ul>
             <li>
               <strong>Email:</strong>
               <a href="mailto:shervinb22@gmail.com">shervinb22@gmail.com</a>
             </li>
-
             <li>
               <strong>GitHub:</strong>
               <a
                 href="https://github.com/ShervinBabaei2007"
                 target="_blank"
                 rel="noopener"
-                >github.com/ShervinBabaei2007</a
               >
+                github.com/ShervinBabaei2007
+              </a>
             </li>
-
             <li>
               <strong>LinkedIn:</strong>
               <a
                 href="https://www.linkedin.com/in/shervin-babaei-5a326a388/"
                 target="_blank"
                 rel="noopener"
-                >linkedin.com/in/shervin-babaei</a
               >
+                linkedin.com/in/shervin-babaei
+              </a>
             </li>
           </ul>
         </section>
 
         <!-- Contact Form -->
         <section class="contactFormSection">
-          <h3>Send a Message</h3>
-
-          <form class="contactForm">
+          <form
+            class="contactForm"
+            action="https://formspree.io/f/manrzblr"
+            method="POST"
+          >
             <div class="formField">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -104,14 +103,21 @@
               ></textarea>
             </div>
 
-            <button type="submit">Send Message</button>
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Portfolio Contact Message"
+            />
+
+            <button type="submit" class="submitBtn">Send Message</button>
           </form>
         </section>
-      </div>
+      </section>
     </main>
 
-    <footer>
-      <p>&copy; Shervin Babaei</p>
+    <!-- footer -->
+    <footer class="siteFooter">
+      <p>&copy; 2025 Shervin Babaei</p>
     </footer>
   </body>
 </html>

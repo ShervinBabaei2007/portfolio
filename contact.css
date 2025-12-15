@@ -1,92 +1,67 @@
-/* CONTACT PAGE */
+/* CONTACT PAGE  */
 
-/* Centered wrapper */
-.contactWrapper {
-  display: grid;
-  gap: 2.5rem;
-  max-width: 42rem;
-  margin: 0 auto;
-  padding-bottom: 3rem;
+.contactCard {
+  max-width: 720px;
+  margin: 3rem auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
 }
 
-/* Header intro */
 .contactHeader {
-  display: grid;
-  gap: 0.75rem;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contactHeader h2 {
-  font-size: 1.6rem;
-  text-align: left;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .contactHeader p {
-  font-size: 0.95rem;
   color: #4b5563;
-  max-width: 55ch;
-  margin: 0 auto;
-  text-align: left;
 }
 
-/* Contact info */
-.contactInfo {
-  display: grid;
-  gap: 0.75rem;
-  text-align: left;
-}
-
-.contactInfo h3 {
-  font-size: 1.2rem;
-}
-
-.contactList {
+.contactInfo ul {
   list-style: none;
   padding: 0;
-  display: grid;
-  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.contactList a {
+.contactInfo li {
+  margin-bottom: 0.75rem;
+}
+
+.contactInfo a {
   color: #2563eb;
   text-decoration: none;
 }
 
-.contactList a:hover {
+.contactInfo a:hover {
   text-decoration: underline;
 }
 
-/* Contact form */
-.contactFormSection {
-  display: grid;
-  gap: 1rem;
-}
-
-.contactFormSection h3 {
-  font-size: 1.2rem;
-  text-align: center;
-}
+/* FORM */
 
 .contactForm {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .formField {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .formField label {
-  font-size: 0.85rem;
   font-weight: 500;
+  margin-bottom: 0.25rem;
 }
 
 .formField input,
 .formField textarea {
-  font-family: inherit;
-  font-size: 0.9rem;
-  padding: 0.6rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #d1d5db;
 }
@@ -97,33 +72,19 @@
   border-color: #2563eb;
 }
 
-/* Submit button */
-.contactForm button {
-  align-self: center;
-  padding: 0.6rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #ffffff;
+/* BUTTON  */
+
+.submitBtn {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
   background-color: #2563eb;
+  color: #ffffff;
   border: none;
   border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.contactForm button:hover {
-  background-color: #1d4ed8;
-}
-
-/* TABLET */
-@media (min-width: 768px) {
-  .contactWrapper {
-    gap: 3rem;
-  }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-  .contactHeader h2 {
-    font-size: 1.9rem;
-  }
+.submitBtn:hover {
+  background-color: #1e40af;
 }
