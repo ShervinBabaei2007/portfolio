@@ -1,0 +1,384 @@
+/* 1. Fonts & Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: lightskyblue;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.page-container {
+  margin: 0 auto;
+}
+
+/* 3. Header Styles */
+header {
+  width: 100%;
+  background-color: #fff3b0;
+  border-bottom: 3px solid black;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
+}
+
+.header-inner {
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.header-top h1 {
+  margin-bottom: 0.75rem;
+}
+
+/* 3.5 Search Form */
+.search-form {
+  display: block;
+  margin: 0 auto 0.75rem auto;
+
+  flex-grow: 1;
+}
+
+.search-form input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 4. Navigation */
+.navigation {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.navigation a {
+  display: inline-block;
+  margin: 0.2rem;
+
+  text-decoration: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+
+  /* tiny animation*/
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.25s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  background-color: #333;
+  color: #fff3b0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  transform: translateY(-6px);
+}
+
+/* 5. Table Styles */
+.sources-table {
+  background-color: rgba(209, 234, 250, 0.7);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.sources-table caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #000000;
+}
+
+.sources-table th,
+.sources-table td {
+  /* remove default borders */
+  border: none;
+  padding: 0.75rem;
+  text-align: left;
+  /* row separator */
+  border-bottom: 1px solid #ddd;
+}
+
+.sources-table th {
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+/* Row hover effect */
+.sources-table tr:hover,
+.sources-table tr:focus {
+  background-color: #e2f0ff;
+  transition: background-color 0.5s ease;
+}
+
+/* Image Styling */
+.sources-table img {
+  width: 12rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Link Styling */
+.sources-table a {
+  color: #0076fd;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.33s ease;
+}
+
+/* lifting up slightly */
+.sources-table a:hover,
+.sources-table a:focus {
+  background-color: #fff3b0;
+  text-decoration: underline;
+  border-radius: 8px;
+  transform: translateY(-6px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.33);
+}
+
+/* Extra line break for multiple links in one cell */
+.nextLine {
+  white-space: pre-wrap;
+}
+
+.captionSpaces {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* 5.5 Theme toggle */
+.header-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.theme-toggle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0.125rem solid black;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  align-items: center;
+
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search-article-bar {
+  /* flex for theme changer + search bar */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* last part (footer) */
+
+.ownerArticle {
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+
+  background-color: #fff3b0;
+  border-top: 2px solid black;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.35);
+
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@media (max-width: 549px) {
+
+  /* Turn table into cards */
+  .sources-table,
+  .sources-table tbody,
+  .sources-table tr,
+  .sources-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .sources-table thead {
+    display: none;
+  }
+
+  /* Card styling */
+  .sources-table tr {
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    /* Reduce a bit tall cards */
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* img larger, better readability/seeing */
+  .sources-table img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+    object-fit: cover;
+  }
+
+  /* Author / source text */
+  .sources-table td {
+    padding: 0.3rem 0;
+    border: none;
+    font-size: 1.125rem;
+  }
+
+  /* Make img source link bit better/cleaner */
+  .sources-table a {
+    display: inline-block;
+    padding: 0.4rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    background-color: transparent;
+    border-radius: 6px;
+  }
+
+  .sources-table a:hover,
+  .sources-table a:focus {
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .captionSpaces {
+    font-size: 1.05rem;
+    padding: 1rem 0;
+  }
+
+  .navigation {
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+  }
+
+  .navigation a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0.25rem;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 1049px) {
+  .captionSpaces {
+    margin-top: 1rem;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1050px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .search-article-bar {
+    grid-column: 3;
+    padding-top: 0.8rem;
+  }
+
+  .navigation {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .theme-toggle-container {
+    grid-column: 3;
+  }
+
+  .header-top h1 {
+    margin-top: 0.8rem;
+  }
+
+  .captionSpaces {
+    padding-top: 2rem;
+
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .article-paragaph .paragaph {
+    margin: 5.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}

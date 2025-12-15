@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shervin Babaei Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="hamburgerMenu.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- wrapper for h1 and paragraph -->
+      <div class="wrapperTitle_subTitle">
+        <h1>Shervin Babaei Portfolio</h1>
+        <p>Full-Stack Web Development Student</p>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="navMenu" id="navMenu">
+        <a href="Index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Container -->
+    <main class="container">
+      <!-- Section 1 ~ about me -->
+      <section class="Img_aboutMe">
+        <img
+          src="images/Shervin-Babaei-modified.png"
+          alt="Picture of Shervin Babaei"
+        />
+        <div class="wrapper_aboutMe">
+          <h2>About Me</h2>
+          <p class="introduction">
+            I am a Full-Stack Web Development student at BCIT focused on
+            building clean, reliable web interfaces with an emphasis on
+            accessibility, performance, and maintainable code. I am especially
+            interested in cybersecurity and understanding how systems behave.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2 ~ projects -->
+      <section class="projects">
+        <h2 class="sectionTitle">Featured Projects</h2>
+
+        <div class="projectCard">
+          <img
+            src="images/Screenshot 2025-12-15 105837.png"
+            alt="Responsive Magazine Layout Project"
+          />
+
+          <div class="projectMeta">
+            <p class="projectTitle">Responsive Magazine Layout</p>
+            <p class="projectDesc">
+              Built a mobile-first magazine layout using semantic HTML and CSS
+              Grid. Focused on layout consistency, accessibility, and clean
+              structure across breakpoints.
+            </p>
+            <p class="projectTech">HTML · CSS · Responsive Design</p>
+            <a href="./Magazine-Shervin-Babaei/index.html">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="projectCard projectCard2">
+          <img
+            src="images/Screenshot 2025-12-15 110220.png"
+            alt="Online Resume Website"
+          />
+
+          <div class="projectMeta">
+            <p class="projectTitle">Online Resume Website</p>
+            <p class="projectDesc">
+              Designed a clean, accessible resume website optimized for
+              readability and recruiter scanning. Emphasized semantic markup and
+              visual hierarchy.
+            </p>
+            <p class="projectTech">HTML · CSS · Accessibility</p>
+            <a href="../Shervin-Resume/index.html">Live Demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Shervin Babaei</p>
+    </footer>
+  </body>
+</html>

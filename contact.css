@@ -1,0 +1,129 @@
+/* CONTACT PAGE */
+
+/* Centered wrapper */
+.contactWrapper {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* Header intro */
+.contactHeader {
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.contactHeader h2 {
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.contactHeader p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  max-width: 55ch;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Contact info */
+.contactInfo {
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.contactInfo h3 {
+  font-size: 1.2rem;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contactList a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contactList a:hover {
+  text-decoration: underline;
+}
+
+/* Contact form */
+.contactFormSection {
+  display: grid;
+  gap: 1rem;
+}
+
+.contactFormSection h3 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contactForm {
+  display: grid;
+  gap: 1rem;
+}
+
+.formField {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.formField label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.formField input,
+.formField textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.formField input:focus,
+.formField textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Submit button */
+.contactForm button {
+  align-self: center;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contactForm button:hover {
+  background-color: #1d4ed8;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .contactWrapper {
+    gap: 3rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .contactHeader h2 {
+    font-size: 1.9rem;
+  }
+}

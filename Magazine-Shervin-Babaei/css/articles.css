@@ -1,0 +1,302 @@
+/* 1. Fonts & Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: lightskyblue;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.page-container {
+  margin: 0 auto;
+}
+
+/* 3. Header Styles */
+header {
+  width: 100%;
+  background-color: #fff3b0;
+  border-bottom: 3px solid black;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.header-inner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-top h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 4. Search Form */
+.search-form {
+  margin: 0 auto 0.75rem auto;
+
+  flex-grow: 1;
+}
+
+.search-form input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 5. Navigation */
+.navigation {
+  /* margin-top: 0.5rem; */
+  padding: 0.5rem 0;
+}
+
+.navigation a {
+  display: inline-block;
+  margin: 0.2rem;
+
+  text-decoration: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+
+  /* tiny animation*/
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.25s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  background-color: #333;
+  color: #fff3b0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  transform: translateY(-6px);
+}
+
+/* 5.5 Theme toggle */
+.header-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.theme-toggle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0.125rem solid black;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  align-items: center;
+
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* 6. Main / Articles */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.allArticles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Article card container */
+.article-card {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Author position */
+.article-card .author {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin: 0.5rem auto 1rem auto;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Article image */
+.article-card img {
+  display: block;
+  width: 100%;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Article h2 position */
+.article-card h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* publication position */
+.article-card .publication {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.spacing {
+  margin-top: 1rem;
+}
+
+/* Content box */
+.content {
+  background-color: #fff3b0;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Bold intro heading */
+.bold-heading {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search-article-bar {
+  /* flex for theme changer + search bar */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* last part (footer) */
+
+.ownerArticle {
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+
+  background-color: #fff3b0;
+  border-top: 2px solid black;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.35);
+
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 10. Media Queries */
+
+/* smaller screens */
+@media screen and (max-width: 549px) {
+  .header-top h1,
+  .search-form {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-form input {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .navigation {
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .navigation a {
+    display: inline-block;
+    width: auto;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1050px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .search-article-bar {
+    grid-column: 3;
+    padding-top: 0.8rem;
+  }
+
+  .navigation {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .theme-toggle-container {
+    grid-column: 3;
+  }
+
+  .header-top h1 {
+    margin-top: 0.8rem;
+  }
+}
