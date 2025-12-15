@@ -248,7 +248,7 @@ footer {
   }
 }
 
-/*DESKTOP (≥1024px) */
+/* DESKTOP (≥1024px) */
 @media (min-width: 1024px) {
   .wrapperTitle_subTitle h1 {
     font-size: 1.9rem;
