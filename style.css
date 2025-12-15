@@ -250,10 +250,6 @@ footer {
 
 /*DESKTOP (≥1024px) */
 @media (min-width: 1024px) {
-  header {
-    padding: 1.5rem 3rem;
-  }
-
   .wrapperTitle_subTitle h1 {
     font-size: 1.9rem;
   }
